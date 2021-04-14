@@ -1,0 +1,11 @@
+@import "src/scss/import";
+.scan-item-section{
+  @extend %flexcenter;
+  flex-direction: column;
+    .scan-item-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+}
+
+

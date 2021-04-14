@@ -1,0 +1,29 @@
+<section class="checkout-section">
+  <ng-container *ngIf="checkoutListItem.length === 0">
+    <p>No Items</p>
+  </ng-container>
+  <ng-container *ngIf="checkoutListItem.length > 0">
+    <h3 class="checkout-title">Scanned Items</h3>
+    <ul class="card-list-container-border">
+      <ng-container *ngFor="let item of checkoutListItem">
+      <li>Product Code: {{item}}</li>
+      </ng-container>
+    </ul>
+    <div class="list-actions">
+      <div class="available-offers">
+        <p>Available offers: </p>
+        <ul class="card-list-container">
+          <li>
+            <label>Buy 1 Get 1 Free on Apples</label>
+            <input type="checkbox" (click)="onBuyOneGetOneFreeOfferApple($event)">
+          </li>
+          <li>
+            <label>3 for the price of 2 on Oranges</label>
+            <input type="checkbox" (click)="getThreeForPriceOfTwoOranges($event)">
+          </li>
+        </ul>
+      </div>
+      <h4>Total: {{total | toPound}}</h4>
+    </div>
+  </ng-container>
+</section>

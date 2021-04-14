@@ -1,0 +1,28 @@
+@import "src/scss/import";
+.home-section {
+  .page-title {
+    @include font($s: 3rem, $w: bold);
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    span:first-child {
+      color: $red;
+    }
+    span:nth-child(2) {
+      color: $orange;
+    }
+  }
+  .page-container {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+    .scan-container {
+      flex-grow: 1;
+      border-right: 1px solid #eee;
+    }
+    .checkout-container {
+      flex-grow: 2;
+      border-left: 1px solid #eee;
+    }
+  }
+}

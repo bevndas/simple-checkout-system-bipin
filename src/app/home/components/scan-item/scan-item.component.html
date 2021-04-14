@@ -1,0 +1,10 @@
+<section class="scan-item-section">
+  <h3 class="scan-item-title">Click to Scan the Product</h3>
+    <ul class="card-list-container-border">
+      <ng-container *ngFor="let product of products">
+        <li (click)="onProductSelected(product.id)">
+          <h4>{{product.title}} </h4><span>Price: {{product.price | toPound}}</span>
+        </li>
+      </ng-container>
+    </ul>
+</section>

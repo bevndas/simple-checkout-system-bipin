@@ -1,0 +1,11 @@
+@import "src/scss/import";
+.no-page-section {
+  @extend %flexcenter;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  @include font($s: 10rem);
+    p {
+      @include font($s: 2rem)
+    }
+}
